@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity(), TodoListAdapter.OnItemClickListener, T
     override fun onResume() {
         //solves the issue of recycleview not refreshing properly
         Timer("SettingUp", false).schedule(2000) {
-            getTodoListData();
+            getTodoListData()
         }
         super.onResume()
     }
@@ -155,7 +155,7 @@ class MainActivity : AppCompatActivity(), TodoListAdapter.OnItemClickListener, T
 
         //solves the issue of deleted record still remaining in recycle view after long press delete.
         Timer("SettingUp", false).schedule(2000) {
-            getTodoListData();
+            getTodoListData()
         }
     }
 
@@ -201,6 +201,6 @@ class MainActivity : AppCompatActivity(), TodoListAdapter.OnItemClickListener, T
     //used for a hidden refresh button. Keeping it for testing
     fun btnRefresh(view: View) {
         Toast.makeText(this@MainActivity, "Data Refreshed.", Toast.LENGTH_SHORT).show()
-        getTodoListData();
+        getTodoListData()
     }
 }
